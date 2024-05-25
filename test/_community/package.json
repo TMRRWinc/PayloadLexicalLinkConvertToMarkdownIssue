@@ -1,0 +1,16 @@
+{
+  "name": "community",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@lexical/headless": "0.13.1",
+    "@lexical/markdown": "0.13.1"
+  }
+}

@@ -49,10 +49,53 @@ describe('_Community Tests', () => {
       collection: postsSlug,
       data: {
         text: 'LOCAL API EXAMPLE',
+        description: {
+          root: {
+            type: 'root',
+            format: '',
+            indent: 0,
+            version: 1,
+            children: [
+              {
+                children: [
+                  {
+                    children: [
+                      {
+                        detail: 0,
+                        format: 0,
+                        mode: 'normal',
+                        style: '',
+                        text: 'link to payload',
+                        type: 'text',
+                        version: 1,
+                      },
+                    ],
+                    direction: 'ltr',
+                    format: '',
+                    indent: 0,
+                    type: 'autolink',
+                    version: 2,
+                    fields: {
+                      linkType: 'custom',
+                      url: 'https://payloadcms.com',
+                    },
+                  },
+                ],
+                direction: 'ltr',
+                format: '',
+                indent: 0,
+                type: 'paragraph',
+                version: 1,
+              },
+            ],
+            direction: 'ltr',
+          },
+        },
       },
     })
 
     expect(newPost.text).toEqual('LOCAL API EXAMPLE')
+    expect(newPost.description_markdown).toEqual('[link to payload](https://payloadcms.com)')
   })
 
   it('rest API example', async () => {
